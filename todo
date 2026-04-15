@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 이 스크립트가 위치한 프로젝트의 절대 경로를 자동으로 갱신합니다.
+# 이 스크립트가 위치한 프로젝트 루트의 절대 경로를 자동으로 파악합니다.
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR"
 
@@ -17,5 +17,5 @@ if ! grep -qF "$ALIAS_LINE" "$ZSHRC" 2>/dev/null; then
 fi
 # ────────────────────────────────────────────────────────────────────────────────
 
-# main.py 실행
-/usr/bin/python3 main.py "$@"
+# src/main.py 실행 (src 레이아웃으로 변경됨)
+/usr/bin/python3 src/main.py "$@"
