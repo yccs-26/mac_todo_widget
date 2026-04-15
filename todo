@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# 이 스크립트가 위치한 프로젝트의 절대 경로를 자동으로 갱신합니다.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$DIR"
+
+# ── 최초 1회: alias 자동 등록 ──────────────────────────────────────────────────
+ALIAS_LINE="alias todo='$DIR/todo'"
+ZSHRC="$HOME/.zshrc"
+
+if ! grep -qF "$ALIAS_LINE" "$ZSHRC" 2>/dev/null; then
+    echo "" >> "$ZSHRC"
+    echo "# Mac Todo Widget" >> "$ZSHRC"
+    echo "$ALIAS_LINE" >> "$ZSHRC"
+    echo "[todo] alias 등록 완료! 이제 어디서든 'todo' 명령어로 실행할 수 있습니다."
+    echo "       현재 터미널 탭에서는 먼저 'source ~/.zshrc'를 한 번 실행해 주세요."
+fi
+# ────────────────────────────────────────────────────────────────────────────────
+
+# main.py 실행
+/usr/bin/python3 main.py "$@"

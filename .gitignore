@@ -49,3 +49,7 @@ secrets.py
 .idea/
 .vscode/
 *.swp
+
+.gitignore
+
+to_do.txt
