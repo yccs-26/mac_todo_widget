@@ -1,7 +1,8 @@
 # Mac Todo Progress Widget
 
-추후 내 하루 일과 보여주는 시간표? 위젯과 연결할 예정
+추후 내 하루 일과 보여주는 시간표? 위젯과 연결할 예정  
 명령어 계속 추가할 예정
+
 ---
 
 ## 🇰🇷 한국어
@@ -32,7 +33,38 @@ PyQt6 + SQLite3 기반으로 구현되었으며, 키보드 명령어만으로 �
 | `block` | 드래그 그립 모드 진입 (창 이동용). 해제는 **더블 클릭** |
 | `exit` | 위젯 종료 |
 
-**태그(`)`앞 단어) 활용 예시**
+---
+
+### 스크린샷
+
+**태그) 내용 형식으로 할 일 추가 (다크 모드)**
+
+![태그 입력 예시 — 다크 모드](docs/images/screenshot_dark_tag.png)
+
+> `운동) 테니스 3시간`, `헬스) 등 운동`, `python) 알고리즘 5문제` 형식으로 입력.  
+> `)` 이전 단어가 카테고리 Tag로 DB에 저장되어 향후 분석에 활용됩니다.  
+> 진행률 바를 좌·우로 드래그하여 0 ~ 150% 설정 가능. 100% 초과 시 그라데이션으로 구분됩니다.
+
+---
+
+**`light mode` 명령어 입력 → 라이트 테마 전환**
+
+| 입력 전 (다크, 명령 입력 중) | 전환 후 (라이트 모드) |
+|:---:|:---:|
+| ![light mode 명령 입력](docs/images/screenshot_lightmode_cmd.png) | ![라이트 모드 결과](docs/images/screenshot_light.png) |
+
+---
+
+**최소화 모드 — 단 한 줄로 압축**
+
+![최소화 모드](docs/images/screenshot_minimized.png)
+
+> ▼ 버튼 클릭 시 리스트가 사라지고 입력창 + 아이콘만 남습니다.  
+> 여백 없이 콘텐츠 크기에 딱 맞게 축소됩니다.
+
+---
+
+### 태그(`)`앞 단어) 활용 예시
 
 ```
 운동) 헬스 - 1시간
@@ -97,7 +129,38 @@ Type a command into the input field and press `Enter`.
 | `block` | Enter drag-grip mode (to reposition the window). **Double-click** to exit |
 | `exit` | Quit the widget |
 
-**Tag (`)` prefix) examples**
+---
+
+### Screenshots
+
+**Tag-based task entry (Dark Mode)**
+
+![Tag input example — Dark Mode](docs/images/screenshot_dark_tag.png)
+
+> Tasks like `운동) 테니스 3시간`, `헬스) 등 운동`, `python) 알고리즘 5문제`.  
+> The word before `)` is saved as a category Tag in the DB for later analysis.  
+> Drag the progress bar left/right to set 0–150%. Over 100% shows a gradient transition.
+
+---
+
+**`light mode` command → Light theme switch**
+
+| Before (Dark, command typed) | After (Light Mode applied) |
+|:---:|:---:|
+| ![light mode command](docs/images/screenshot_lightmode_cmd.png) | ![light mode result](docs/images/screenshot_light.png) |
+
+---
+
+**Minimized Mode — Collapsed to a single bar**
+
+![Minimized mode](docs/images/screenshot_minimized.png)
+
+> Click ▼ to hide the list, leaving only the input field and icon.  
+> The widget snaps to fit-content height with zero wasted space.
+
+---
+
+### Tag (`)` prefix) examples
 
 ```
 Workout) Gym - 1 hour
